@@ -3,4 +3,4 @@ numpy
 pydeck
 pandas
 plotly-express
-
+openpyxl == 3.0.10
