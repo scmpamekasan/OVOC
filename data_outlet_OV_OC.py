@@ -37,6 +37,7 @@ sektor2 = (df_OC_OV_4.loc[:,("Sektor")].drop_duplicates())
 list_sektor2 = sektor2.values.tolist()
 
 Sektor = st.selectbox("Pilih Sektor", list_sektor1)
+st.write("Update Per 16 Juli 2022 (data akan diupdate tiap minggu)")
 
 #
 col1,col2 = st.columns(2)
