@@ -49,9 +49,9 @@ with col1 :
 
 with col2 :
     st.subheader ('Outlet Belum ⚽️🅲')
-    Sektor2 = st.selectbox("Pilih Sektor", list_sektor2)
+ 
 
-    df_selection2 = df_OC_OV_4.query("Sektor2==@sektor" )
+    df_selection2 = df_OC_OV_4.query("Sektor==@Sektor" )
     st.write('Jumlah Outlet Belum Transaksi=',len(df_selection2.index))
     st.write(df_selection2)
 #
