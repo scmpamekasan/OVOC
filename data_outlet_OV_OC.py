@@ -36,13 +36,13 @@ list_sektor1 = sektor1.values.tolist()
 sektor2 = (df_OC_OV_4.loc[:,("Sektor")].drop_duplicates())
 list_sektor2 = sektor2.values.tolist()
 
+Sektor = st.selectbox("Pilih Sektor", list_sektor1)
 
 #
 col1,col2 = st.columns(2)
 with col1 :
     st.subheader ('Outlet Belum ⚽️🅥')
-    Sektor = st.selectbox("Pilih Sektor", list_sektor1)
-
+    
     df_selection = df_OC_OV_2.query("Sektor==@Sektor" )
     st.write('Jumlah Outlet Belum Visit=',len(df_selection.index))
     st.write(df_selection)
