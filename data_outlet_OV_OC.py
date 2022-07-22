@@ -6,9 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 import streamlit.components.v1 as components
 import numpy as np
-import altair as alt
 import pydeck as pdk
-import plotly.graph_objects as go
 
 st.set_page_config(layout="wide")
 
