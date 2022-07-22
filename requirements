@@ -2,3 +2,4 @@ streamlit
 numpy
 pydeck
 pandas
+plotly-express
