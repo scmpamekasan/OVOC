@@ -12,7 +12,7 @@ st.title('DAFTAR OUTLET BELUM OV & OC')
 st.markdown("""---""")
 
 df_OC_OV =  pd.read_excel(
-            io="/Users/ekasulawestara/Belajar Pyhton2/Data_CL_OV_OC_Sem2.xlsx",
+            io="Data_CL_OV_OC_Sem2.xlsx",
             engine="openpyxl",
             sheet_name="CL",
             usecols="A:H",
