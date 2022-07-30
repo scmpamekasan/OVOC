@@ -42,13 +42,37 @@ with col1 :
     st.subheader ('Outlet Belum ⚽️🅥')
     Sektor = st.selectbox("Pilih Sektor", list_sektor1)
 
-    df_selection = df_OC_OV_2.query("Sektor==@Sektor" )
-    st.write('Jumlah Outlet Belum Visit=',len(df_selection.index))
-    st.write(df_selection)
+    df_selection1 = df_OC_OV_2.query("Sektor==@Sektor" )
+    st.write('Jumlah Outlet Belum Visit=',len(df_selection1.index))
+    st.write(df_selection1)
 
 with col2 :
     st.subheader ('Outlet Belum ⚽️🅲')
 
-    df_selection = df_OC_OV_4.query("Sektor==@Sektor" )
-    st.write('Jumlah Outlet Belum Transaksi=',len(df_selection.index))
-    st.write(df_selection)
+    df_selection2 = df_OC_OV_4.query("Sektor==@Sektor" )
+    st.write('Jumlah Outlet Belum Transaksi=',len(df_selection2.index))
+    st.write(df_selection2)
+            
+def convert_df(df_selection1):
+     # IMPORTANT: Cache the conversion to prevent computation on every rerun
+     return df_selection1.to_csv().encode('utf-8')
+
+csv = convert_df(df_selection1)
+st.download_button(
+    label="Download Data Belum OV",
+    data=csv,
+    file_name='Outlet_Belum_OV',
+    mime='text/csv',
+)
+
+def convert_df2(df_selection2):
+     # IMPORTANT: Cache the conversion to prevent computation on every rerun
+     return df_selection2.to_csv().encode('utf-8')
+
+csv = convert_df2(df_selection2)
+st.download_button(
+    label="Download Data Belum OC",
+    data=csv,
+    file_name='Outlet_Belum_OC',
+    mime='text/csv',
+)
