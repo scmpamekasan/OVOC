@@ -10,7 +10,7 @@ st.set_page_config(layout="wide")
 st.title('DAFTAR OUTLET BELUM OV & OC')
 
 st.markdown("""---""")
-st.write("Update per 6 Agustus 2022")
+st.write("Update per 19 Agustus 2022")
 
 df_OC_OV =  pd.read_excel(
             io="Data_CL_OV_OC_Sem2.xlsx",
